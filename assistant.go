@@ -25,8 +25,8 @@
 package main
 
 import (
-	"alfred/internal/cmd"
 	"fmt"
+	"github.com/gelleson/assistant/internal/cmd"
 )
 
 func main() {

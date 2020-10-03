@@ -1,4 +1,4 @@
-module asistant
+module github.com/gelleson/assistant
 
 go 1.14
 
