@@ -23,7 +23,7 @@ var (
 
 func init() {
 	start.Flags().Bool(DISABLE_NOTIFY, false, "disable-notify")
-	start.Flags().String(TELEGRAM_TOKEN, "1267959586:AAHYNBZYq4jnvpm4xR13yzKvJoJpmboQD3Q", "1267959586:AAHYNBZYq4jnvpm4xR13yzKvJoJpmboQD3Q")
+	start.Flags().String(TELEGRAM_TOKEN, "", "XXXXXXXX:XXXXXXXXXXXXXXXXXXX")
 	start.Flags().IntP(SERVER_PORT, "p", 4000, "5000")
 	start.Flags().Bool(PROD, false, "true")
 }
