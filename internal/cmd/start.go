@@ -67,7 +67,7 @@ var start = &cobra.Command{
 	},
 	Run: func(cmd *cobra.Command, args []string) {
 		banner := ascii.NewBannerWithColor(ascii.BANNER_COLOR_RED)
-		banner.HeadBanner("ASSISTANT", "START")
+		banner.Print("ASSISTANT", "START")
 
 		m := macaron.Classic()
 

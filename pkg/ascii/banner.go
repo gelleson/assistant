@@ -6,45 +6,41 @@ import (
 	"strings"
 )
 
+// ColorName is subtype of the string to provide color name
 type ColorName string
 
 const (
+	// BANNER_COLOR_GREEM is just green
 	BANNER_COLOR_GREEM ColorName = "green"
-	BANNER_COLOR_RED   ColorName = "red"
-	BANNER_COLOR_BLUE  ColorName = "blue"
+	// BANNER_COLOR_RED is just red
+	BANNER_COLOR_RED ColorName = "red"
+	// BANNER_COLOR_BLUE is just blue
+	BANNER_COLOR_BLUE ColorName = "blue"
 )
 
+// Banner struct to provide API to print cool ASCII arts
 type Banner struct {
 	color ColorName
 }
 
+// func NewBannerWithColor constructor to create new Banner with default ColorName
 func NewBanner() *Banner {
 	return &Banner{}
 }
 
+// func NewBannerWithColor constructor to create new Banner with ColorName
 func NewBannerWithColor(color ColorName) *Banner {
 	return &Banner{color: color}
 }
 
-func (b Banner) HeadBanner(words ...string) {
+// Method Print to print as ASCII
+func (b Banner) Print(words ...string) {
 
 	if b.color == "" {
 		b.color = BANNER_COLOR_BLUE
 	}
 	fmt.Println("")
 	newFigure := figure.NewColorFigure(strings.Join(words, " "), "small", string(b.color), true)
-	newFigure.Print()
-	fmt.Println("")
-	fmt.Println("")
-}
-
-func (b Banner) SmallBanner(name string, version string) {
-
-	if b.color == "" {
-		b.color = BANNER_COLOR_BLUE
-	}
-	fmt.Println("")
-	newFigure := figure.NewColorFigure(fmt.Sprintf("%v %v", name, version), "small", string(b.color), false)
 	newFigure.Print()
 	fmt.Println("")
 	fmt.Println("")

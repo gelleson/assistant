@@ -20,7 +20,7 @@ var version = &cobra.Command{
 	Short: "version of the build",
 	Run: func(cmd *cobra.Command, args []string) {
 		banner := ascii.NewBannerWithColor(ascii.BANNER_COLOR_RED)
-		banner.HeadBanner("ASSISTANT", "VERSION")
+		banner.Print("ASSISTANT", "VERSION")
 		fmt.Println(fmt.Sprintf("Version: %v", Version))
 		fmt.Println(fmt.Sprintf("Commit: %v", Commit))
 		fmt.Println(fmt.Sprintf("Build Time: %v", BuildTime))

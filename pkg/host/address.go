@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+// GetIPAddress provide local ip address of the server
 func GetIPAddress() string {
 	return getLocalIP()
 }
