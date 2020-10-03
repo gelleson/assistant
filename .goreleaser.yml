@@ -12,7 +12,7 @@ builds:
 
     ldflags:
       - -X 'github.com/gelleson/assistant/internal/cmd.Version={{.Version}}'
-      - -X 'github.com/gelleson/assistant/internal/cmd.Commit={{.Commit}} '
+      - -X 'github.com/gelleson/assistant/internal/cmd.Commit={{.ShortCommit}} '
       - -X 'github.com/gelleson/assistant/internal/cmd.BuildTime={{.Date}} '
     goos:
       - linux
