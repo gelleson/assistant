@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"alfred/pkg/ascii"
 	"alfred/pkg/host"
 	"alfred/pkg/notification"
 	"github.com/spf13/cobra"
@@ -28,7 +29,7 @@ func init() {
 }
 
 var start = &cobra.Command{
-	Use:   "run",
+	Use:   "start",
 	Short: "command to run web server",
 	PreRun: func(cmd *cobra.Command, args []string) {
 		disableNotify, err := cmd.Flags().GetBool(DISABLE_NOTIFY)
@@ -61,6 +62,9 @@ var start = &cobra.Command{
 		}
 	},
 	Run: func(cmd *cobra.Command, args []string) {
+		banner := ascii.NewBannerWithColor(ascii.BANNER_COLOR_RED)
+		banner.HeadBanner("ASSISTANT", "START")
+
 		m := macaron.Classic()
 
 		m.Map(l.Named("server"))
