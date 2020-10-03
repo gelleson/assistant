@@ -1,5 +1,6 @@
 # Assistant
 
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/gelleson/assistant)](https://pkg.go.dev/github.com/gelleson/assistant)
 [![Go Report Card](https://goreportcard.com/badge/github.com/gelleson/assistant)](https://goreportcard.com/report/github.com/gelleson/assistant) 
 [![Assistant](https://circleci.com/gh/gelleson/assistant.svg?style=svg)](https://circleci.com/gh/gelleson/assistant.svg?style=svg)
 [![Build Status](https://travis-ci.org/gelleson/assistant.svg?branch=master)](https://travis-ci.org/gelleson/assistant)
