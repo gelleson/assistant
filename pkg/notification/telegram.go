@@ -23,7 +23,7 @@ type payload struct {
 	Text     string `json:"text"`
 }
 
-// Telegram.Notify is method to send message through telegram server as bot
+// Notify is method to send message through telegram server as bot
 func (t Telegram) Notify(id string, message string) error {
 	clientId, err := strconv.Atoi(id)
 
