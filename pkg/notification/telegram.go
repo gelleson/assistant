@@ -13,6 +13,7 @@ type Telegram struct {
 	key string
 }
 
+// NewTelegramProvider function to create Telegram struct with API key
 func NewTelegramProvider(key string) *Telegram {
 	return &Telegram{key: key}
 }

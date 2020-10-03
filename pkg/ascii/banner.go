@@ -23,7 +23,7 @@ type Banner struct {
 	color ColorName
 }
 
-// func NewBannerWithColor constructor to create new Banner with default ColorName
+// func NewBanner constructor to create new Banner with default ColorName
 func NewBanner() *Banner {
 	return &Banner{}
 }
@@ -33,7 +33,7 @@ func NewBannerWithColor(color ColorName) *Banner {
 	return &Banner{color: color}
 }
 
-// Method Print to print as ASCII
+// Method Banner.Print to print as ASCII
 func (b Banner) Print(words ...string) {
 
 	if b.color == "" {
