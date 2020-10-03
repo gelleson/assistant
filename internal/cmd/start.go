@@ -25,9 +25,9 @@
 package cmd
 
 import (
-	"github.com/gelleson/assistant/pkg/ascii"
-	"github.com/gelleson/assistant/pkg/host"
-	"github.com/gelleson/assistant/pkg/notification"
+	"github.com/gelleson/assistant/internal/ascii"
+	"github.com/gelleson/assistant/internal/host"
+	"github.com/gelleson/assistant/internal/notification"
 	"github.com/spf13/cobra"
 	"go.uber.org/zap"
 	"gopkg.in/macaron.v1"

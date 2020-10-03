@@ -26,7 +26,7 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/gelleson/assistant/pkg/ascii"
+	"github.com/gelleson/assistant/internal/ascii"
 	"github.com/spf13/cobra"
 )
 
