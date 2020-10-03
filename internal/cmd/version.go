@@ -7,8 +7,11 @@ import (
 )
 
 var (
-	Version   string
-	Commit    string
+	// Version of the builds following tags
+	Version string
+	// Commit of the builds following tags
+	Commit string
+	// BuildTime of the builds following tags
 	BuildTime string
 )
 

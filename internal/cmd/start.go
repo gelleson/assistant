@@ -10,10 +10,14 @@ import (
 )
 
 const (
+	// TELEGRAM_TOKEN Telegram token to grant access to the bot
 	TELEGRAM_TOKEN = "tg-token"
+	// DISABLE_NOTIFY disable send message with address after start the server
 	DISABLE_NOTIFY = "disable-notify"
-	SERVER_PORT    = "port"
-	PROD           = "prod"
+	// SERVER_PORT port of the server
+	SERVER_PORT = "port"
+	// PROD if want to run in production mode
+	PROD = "prod"
 )
 
 var (
