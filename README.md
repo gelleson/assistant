@@ -1,6 +1,6 @@
 # Assistant
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/gelleson/assistant)](https://goreportcard.com/report/github.com/gelleson/assistant)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gelleson/assistant)](https://goreportcard.com/report/github.com/gelleson/assistant) [![Assistant](https://circleci.com/gh/gelleson/assistant.svg?style=svg)](https://circleci.com/gh/gelleson/assistant.svg?style=svg)
 
 It's small project for my small one board computer. 
 This project has made for the resolve my tasks which I need to do on one board computer.

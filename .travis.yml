@@ -6,6 +6,16 @@ env:
   global:
     - TEST_TIMEOUT_SCALE=10
     - GO111MODULE=on
+    - CODECOV_TOKEN="a8aa6ad7-6737-4b23-8719-00d487438127"
 go:
   - 1.14.x
   - master
+
+before_install:
+  - go get -t -v ./...
+
+script:
+  - go test -race -coverprofile=coverage.txt -covermode=atomic
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
