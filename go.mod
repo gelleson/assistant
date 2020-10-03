@@ -1,4 +1,4 @@
-module alfred
+module asistant
 
 go 1.14
 

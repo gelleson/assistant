@@ -25,9 +25,9 @@
 package cmd
 
 import (
-	"alfred/pkg/ascii"
-	"alfred/pkg/host"
-	"alfred/pkg/notification"
+	"asistant/pkg/ascii"
+	"asistant/pkg/host"
+	"asistant/pkg/notification"
 	"github.com/spf13/cobra"
 	"go.uber.org/zap"
 	"gopkg.in/macaron.v1"

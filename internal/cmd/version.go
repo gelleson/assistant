@@ -25,7 +25,7 @@
 package cmd
 
 import (
-	"alfred/pkg/ascii"
+	"asistant/pkg/ascii"
 	"fmt"
 	"github.com/spf13/cobra"
 )
