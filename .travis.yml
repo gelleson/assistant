@@ -29,3 +29,4 @@ deploy:
       tags: true
       branch: master
       condition: $TRAVIS_GO_VERSION =~ ^1\.15
+
