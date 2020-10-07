@@ -6,6 +6,7 @@ env:
   global:
     - TEST_TIMEOUT_SCALE=10
     - GO111MODULE=on
+    - GITHUB_TOKEN=$GITHUB_TOKEN
 go:
   - 1.15.x
   - 1.14.x
@@ -23,9 +24,8 @@ script:
 deploy:
   - provider: script
     script: curl -sL https://git.io/goreleaser | bash
-    github_token: "$GITHUB_TOKEN"
     verbose: true
     on:
       tags: true
       branch: release
-      condition: $TRAVIS_OS_NAME = linux
+      condition: $TRAVIS_OS_NAME = linux AND $TRAVIS_GO_VERSION =~ ^1\.15
