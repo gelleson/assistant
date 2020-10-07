@@ -6,7 +6,6 @@ env:
   global:
     - TEST_TIMEOUT_SCALE=10
     - GO111MODULE=on
-    - GITHUB_TOKEN=$GITHUB_TOKEN
 go:
   - 1.15.x
 
