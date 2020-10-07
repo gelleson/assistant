@@ -27,5 +27,6 @@ deploy:
     verbose: true
     on:
       tags: true
-      branch: release
-      condition: $TRAVIS_OS_NAME = linux AND $TRAVIS_GO_VERSION =~ ^1\.15
+      branch: master
+      condition: $TRAVIS_GO_VERSION =~ ^1\.15
+
