@@ -26,6 +26,7 @@ package cmd
 
 import (
 	"github.com/gelleson/assistant/internal/ascii"
+	"github.com/gelleson/assistant/internal/controller"
 	"github.com/gelleson/assistant/internal/host"
 	"github.com/gelleson/assistant/internal/notification"
 	"github.com/spf13/cobra"
@@ -99,6 +100,10 @@ var start = &cobra.Command{
 
 		m.Get("/getMyAddress", func(l *zap.Logger) string {
 			return host.GetIPAddress()
+		})
+
+		m.Group("/monitoring", func() {
+			m.Get("/metric", controller.GetSnapshot)
 		})
 
 		port, err := cmd.Flags().GetInt(SERVER_PORT)
