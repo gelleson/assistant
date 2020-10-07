@@ -16,13 +16,17 @@ builds:
       - -X 'github.com/gelleson/assistant/internal/cmd.BuildTime={{.Date}} '
     goos:
       - linux
-      - windows
       - darwin
+
+    goarch:
+      - amd64
+      - arm
+      - arm64
+
 archives:
   - replacements:
       darwin: Darwin
       linux: Linux
-      windows: Windows
       386: i386
       amd64: x86_64
 checksum:
