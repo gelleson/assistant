@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package auth
+package model
 
 import "time"
 
