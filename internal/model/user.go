@@ -37,11 +37,13 @@ type User struct {
 	// Email to contact with user
 	Email string `json:"email" validate:"required,email" gorm:"unique,index"`
 	// FirstName of the user
-	FirstName string `json:"first_name"`
+	FirstName string `json:"firstName"`
 	// LastName of the user
-	LastName string `json:"last_name"`
+	LastName string `json:"lastName"`
+	// IsAdmin part of admin team
+	IsAdmin bool `json:"isAdmin"`
 	// Password of the user encrypted
 	Password string `json:"-" validate:"required"`
 	// LastActive is time when used api
-	LastActive time.Time `json:"last_active"`
+	LastActive time.Time `json:"lastActive"`
 }
