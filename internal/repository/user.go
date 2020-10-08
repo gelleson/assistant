@@ -22,26 +22,15 @@
  * SOFTWARE.
  */
 
-package model
+package repository
 
-import (
-	"gorm.io/gorm"
-	"time"
-)
+import "gorm.io/gorm"
 
-type User struct {
-	// gorm.Model pk
-	gorm.Model
-	// Username is required
-	Username string `json:"username"`
-	// Email to contact with user
-	Email string `json:"email"`
-	// FirstName of the user
-	FirstName string `json:"first_name"`
-	// LastName of the user
-	LastName string `json:"last_name"`
-	// Password of the user encrypted
-	Password string `json:"-"`
-	// LastActive is time when used api
-	LastActive time.Time `json:"last_active"`
+// Repository impl for the user
+type UserRepository struct {
+	db *gorm.DB
+}
+
+func (ur UserRepository) GetUser() {
+
 }
