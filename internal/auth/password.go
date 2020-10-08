@@ -35,11 +35,7 @@ const (
 func HashPassword(password string) (string, error) {
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(password), DEFAULT_CONST)
 
-	if err != nil {
-		return "", err
-	}
-
-	return string(hashedPassword), nil
+	return string(hashedPassword), err
 }
 
 // ComparePassword returns true if good password
