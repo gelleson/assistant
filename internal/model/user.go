@@ -24,9 +24,14 @@
 
 package model
 
-import "time"
+import (
+	"gorm.io/gorm"
+	"time"
+)
 
 type User struct {
+	// gorm.Model pk
+	gorm.Model
 	// FirstName of the user
 	FirstName string `json:"first_name"`
 	// LastName of the user
@@ -35,6 +40,4 @@ type User struct {
 	Password string `json:"-"`
 	// LastActive is time when used api
 	LastActive time.Time `json:"last_active"`
-	// Active status of the user
-	Active bool `json:"active"`
 }
