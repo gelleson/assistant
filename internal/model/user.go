@@ -33,15 +33,15 @@ type User struct {
 	// gorm.Model pk
 	gorm.Model
 	// Username is required
-	Username string `json:"username"`
+	Username string `json:"username" validate:"required" gorm:"unique,index"`
 	// Email to contact with user
-	Email string `json:"email"`
+	Email string `json:"email" validate:"required,email" gorm:"unique,index"`
 	// FirstName of the user
 	FirstName string `json:"first_name"`
 	// LastName of the user
 	LastName string `json:"last_name"`
 	// Password of the user encrypted
-	Password string `json:"-"`
+	Password string `json:"-" validate:"required"`
 	// LastActive is time when used api
 	LastActive time.Time `json:"last_active"`
 }
