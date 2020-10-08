@@ -10,5 +10,7 @@ require (
 	github.com/stretchr/testify v1.6.1 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.16.0
+	golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4
 	gopkg.in/macaron.v1 v1.3.9
+	gorm.io/gorm v1.20.2 // indirect
 )
