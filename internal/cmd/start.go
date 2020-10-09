@@ -28,7 +28,9 @@ import (
 	"github.com/gelleson/assistant/internal/ascii"
 	"github.com/gelleson/assistant/internal/controller"
 	"github.com/gelleson/assistant/internal/host"
+	"github.com/gelleson/assistant/internal/middleware"
 	"github.com/gelleson/assistant/internal/notification"
+	"github.com/go-macaron/session"
 	"github.com/spf13/cobra"
 	"go.uber.org/zap"
 	"gopkg.in/macaron.v1"
@@ -97,6 +99,11 @@ var start = &cobra.Command{
 		m := macaron.Classic()
 
 		m.Map(l.Named("server"))
+
+		m.Use(macaron.Renderer())
+		m.Use(session.Sessioner())
+
+		m.Use(middleware.IsAuthorized)
 
 		m.Get("/getMyAddress", func(l *zap.Logger) string {
 			return host.GetIPAddress()
