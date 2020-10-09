@@ -29,11 +29,21 @@ import (
 	"github.com/go-macaron/session"
 	"gopkg.in/macaron.v1"
 	"net/http"
+	"strings"
 )
 
 func IsAuthorized(skipUrls ...string) func(ctx *macaron.Context, sess session.Store) {
 
 	return func(ctx *macaron.Context, sess session.Store) {
+
+		for _, url := range skipUrls {
+
+			if strings.Contains(ctx.Req.RequestURI, url) {
+				ctx.Next()
+				return
+			}
+
+		}
 
 		if user := sess.Get("user"); user == nil {
 			ctx.Error(http.StatusForbidden, "user not authorized")
